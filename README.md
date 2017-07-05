@@ -35,7 +35,7 @@ This code is used for detecting Anomaly in the Stream Data. Prepared this as a p
    The ‘javac’ command in run.sh is used for compiling the main program file – ‘AnomalyDetector.java’. Also, the location        of jars is specified while compiling the main program.  
    The ‘java’ command in run.sh is used for running the code. Here, I have included the jars to be used, name of the java file    with source code, input files and output file.
    
-   ### 4.Others ###
+   ### 4.Extras ###
    
    **Alternative Algorithm For adding a new friend to the social network**  
    Instead of rebuilding the whole social network, we can just change the necessary details in the social network.
