@@ -1,7 +1,7 @@
 # anomaly_detection
 This code is used for detecting Anomaly in the Stream Data. Prepared this as a part of CodingChallenge for Data Insight
 
-1.	Summarization of the Approach:
+**#### 1.	Summarization of the Approach:**
     To implement the challenge, I have followed below steps.
     Steps Followed:
     1.	Read the batch_log file into readInput Array List
@@ -19,7 +19,7 @@ This code is used for detecting Anomaly in the Stream Data. Prepared this as a p
         V.	Add the purchase event to eventDictionary(step 2a)
 
 
-2.	Dependencies:
+**### 2.	Dependencies:**
 
     I have used two external jars for processing the Json inputs and outputs.
 
@@ -31,7 +31,7 @@ This code is used for detecting Anomaly in the Stream Data. Prepared this as a p
     File to Download: gson-2.6.2-javadoc.jar     
 
 
-3.	Run instructions:
+**## 3.	Run instructions:**
 
     The ‘src’ folder contains all the java files(*.java) containing the source code. It also contains a folder ‘jars’ which       has external java libraries used in my program. 
     The run.sh contains the script to compile and run the Java Program. The run.sh has to be modified in    case the java file     name or the input/output directory of the program changes. 
