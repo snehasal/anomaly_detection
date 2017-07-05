@@ -34,4 +34,14 @@ This code is used for detecting Anomaly in the Stream Data. Prepared this as a p
    The run.sh contains the script to compile and run the Java Program. The run.sh has to be modified in case the java file        name or the input/output directory of the program changes.  
    The ‘javac’ command in run.sh is used for compiling the main program file – ‘AnomalyDetector.java’. Also, the location        of jars is specified while compiling the main program.  
    The ‘java’ command in run.sh is used for running the code. Here, I have included the jars to be used, name of the java file    with source code, input files and output file.
+   
+   ### 4. Alternative Algorithm ###
+   For adding a new friends to the social network,instead of rebuilding the whole social network, we can just change the      necessary details in the social network.
+
+   Let's assume A and B become friends and there is a social network that exists already.
+
+   1. Chech depth of B in A's network. Since it will be greater than 1, change it to 1. Also keep track of previous neighbour via which A can reach B, which in this case would be B itself. Previous neighbour helps when we need to delete.
+   2. In A's social network, check all the nodes and see at what depth they are connected to B with. If depth is greater than 2, change their depths to 2, change their previous neighbour to A and add them to a queue of nodes that need to be updated. Once all in A's network are updated, we pop top element in queue, set the depth to 2, and see in their network where B is. If B is now at a depth of more than 3, we do the same, with previous neighbour being the node itself instead of A and depth being 3. 
+   3. Do this recursively until the queue is empty, or we reach our max depth of T
+   For B we need to do the same steps to integrate A to its list. 
 
