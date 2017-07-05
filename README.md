@@ -9,14 +9,14 @@ This code is used for detecting Anomaly in the Stream Data. Prepared this as a p
       * Create objects of class PurchaseEvents and update eventDictionary. The eventDictionary is a hashmap with the key               as user and value as an Array list of Objects of class PuchaseEvent. These objects contain the transactions as                 seen in input data.
       * Populate the social Network which has friends of each user at a Degree of 1. is a hashmap with the key as user                 and value as a Set of friends of that user.
    3. Read Streaming Data into StreamData Array List. This data is processed line by line.
-   4. For each Test Event:
+   4. For each Test Event:  
       - For a befriend/unfriend event – update the social Network of friends.
-      - For a purchase Event:
-            1.	 Retrieve the friends of the user up to degree D.
-            2.  Gather all transaction Data for the friendsList and put them in a priority Queue based on latest timestamp                     (first) and order of event(second)
-            3.  Calculate mean and standard deviation of the top T events and compare it with test amount.
-            4.  If the amount is found to be anomalous, write it to the output file
-            5.	 Add the purchase event to eventDictionary(step 2a)
+      - For a purchase Event:  
+            1.Retrieve the friends of the user up to degree D.
+            2.Gather all transaction Data for the friendsList and put them in a priority Queue based on latest timestamp                     (first) and order of event(second)
+            3.Calculate mean and standard deviation of the top T events and compare it with test amount.
+            4.If the amount is found to be anomalous, write it to the output file
+            5.Add the purchase event to eventDictionary(step 2a)
 
 ### 2.	Dependencies: ###
    I have used two external jars for processing the Json inputs and outputs.
