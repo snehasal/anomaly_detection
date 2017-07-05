@@ -13,7 +13,7 @@ This code is used for detecting Anomaly in the Stream Data. Prepared this as a p
       - For a befriend/unfriend event – update the social Network of friends.
       - For a purchase Event:
        1. Retrieve the friends of the user up to degree D.
-       2. Gather all transaction Data for the friendsList and put them in a priority Queue based on latest timestamp (first) and order of event(second).
+       2. Gather all transaction Data for the friendsList and put them in a priority Queue based on latest timestamp (first) and order of event occurrence (second).
        3. Calculate mean and standard deviation of the top T events and compare it with test amount.
        4. If the amount is found to be anomalous, write it to the output file.
        5. Add the purchase event to eventDictionary(step 2a).
@@ -35,8 +35,9 @@ This code is used for detecting Anomaly in the Stream Data. Prepared this as a p
    The ‘javac’ command in run.sh is used for compiling the main program file – ‘AnomalyDetector.java’. Also, the location        of jars is specified while compiling the main program.  
    The ‘java’ command in run.sh is used for running the code. Here, I have included the jars to be used, name of the java file    with source code, input files and output file.
    
-   ### 4. Alternative Algorithm ###
-   **For adding a new friend to the social network**  
+   ### 4.Others ###
+   
+   **Alternative Algorithm For adding a new friend to the social network**  
    Instead of rebuilding the whole social network, we can just change the necessary details in the social network.
    
    Let's assume A and B become friends and there is a social network that exists already.
@@ -46,16 +47,15 @@ This code is used for detecting Anomaly in the Stream Data. Prepared this as a p
    3.	Do this recursively until the queue is empty, or we reach our max depth of T.
    
    For B we need to do the same steps to integrate A to its list.
-   
-   
-**Delete Friend from social netwrok** . 
-Suppose we want to unfriend A and B.
 
-1. Remove B from A's list.
-2. Add A to a queue. Go through A's list and find get all nodes that are connected to B with previous node as A. Add them to the queue. 
-3. For all nodes in the queue, do the same and add affected nodes in the queue. i.e. If we are processing node X, we see in X's list which nodes have connection to B with prevnode as X.
-4. Once we have all nodes we need, we start from A and see if we can get to B from any of the nodes in A by adding a depth of 1 to it. We process down the queue and keep doing this for all nodes. 
-5. Repeat step for until no nodes update anymore
+   **Alternative Algorithm For deleting a friend from the social network**  
+   Suppose we want to unfriend A and B.
+
+   1. Remove B from A's list.
+   2. Add A to a queue. Go through A's list and find get all nodes that are connected to B with previous node as A. Add them to the queue. 
+   3. For all nodes in the queue, do the same and add affected nodes in the queue. i.e. If we are processing node X, we see in X's list which nodes have connection to B with prevnode as X.
+   4. Once we have all nodes we need, we start from A and see if we can get to B from any of the nodes in A by adding a depth of 1 to it. We process down the queue and keep doing this for all nodes. 
+   5. Repeat step for until no nodes update anymore
 (Replicating Bellman Ford algorithm)
-6. Once that is done, we have successfully integrated A-B deletion from the network.
+   6. Once that is done, we have successfully integrated A-B deletion from the network.
 
