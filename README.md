@@ -6,8 +6,8 @@ This code is used for detecting Anomaly in the Stream Data. Prepared this as a p
    Steps Followed:
    1. Read the batch_log file into readInput Array List
    2. Process the input file to build a model
-      a. Create objects of class PurchaseEvents and update eventDictionary. The eventDictionary is a hashmap with the key              as user and value as an Array list of Objects of class PuchaseEvent. These objects contain the transactions as                seen in input data.
-      b. Populate the social Network which has friends of each user at a Degree of 1. is a hashmap with the key as user                and value as a Set of friends of that user.
+      *a. Create objects of class PurchaseEvents and update eventDictionary. The eventDictionary is a hashmap with the key              as user and value as an Array list of Objects of class PuchaseEvent. These objects contain the transactions as                seen in input data.
+      *b. Populate the social Network which has friends of each user at a Degree of 1. is a hashmap with the key as user                and value as a Set of friends of that user.
    3. Read Streaming Data into StreamData Array List. This data is processed line by line.
    4. For each Test Event:
       a. For a befriend/unfriend event – update the social Network of friends.
