@@ -13,6 +13,7 @@ This code is used for detecting Anomaly in the Stream Data. Prepared this as a p
       - For a befriend/unfriend event – update the social Network of friends.
       - For a purchase Event:
        1. Retrieve the friends of the user up to degree D.
+       2. Gather all transaction Data for the friendsList and put them in a priority Queue based on latest timestamp                     (first) and order of event(second).
        2. Gather all transaction Data for the friendsList and put them in a priority Queue based on latest timestamp                     (first) and order of event(second).
        3. Calculate mean and standard deviation of the top T events and compare it with test amount.
        4. If the amount is found to be anomalous, write it to the output file.
