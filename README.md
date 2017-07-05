@@ -10,8 +10,8 @@ This code is used for detecting Anomaly in the Stream Data. Prepared this as a p
       * b. Populate the social Network which has friends of each user at a Degree of 1. is a hashmap with the key as user                and value as a Set of friends of that user.
    3. Read Streaming Data into StreamData Array List. This data is processed line by line.
    4. For each Test Event:
-      a. For a befriend/unfriend event – update the social Network of friends.
-      b.	For a purchase Event:
+      - a. For a befriend/unfriend event – update the social Network of friends.
+      - b.	For a purchase Event:
          I.	  Retrieve the friends of the user up to degree D.
          II.  Gather all transaction Data for the friendsList and put them in a priority Queue based on latest timestamp                     (first) and order of event(second)
          III. Calculate mean and standard deviation of the top T events and compare it with test amount.
@@ -33,10 +33,6 @@ This code is used for detecting Anomaly in the Stream Data. Prepared this as a p
 ### 3.	Run instructions: ###
 
    The ‘src’ folder contains all the java files(*.java) containing the source code. It also contains a folder ‘jars’ which        has external java libraries used in my program. 
-   
    The run.sh contains the script to compile and run the Java Program. The run.sh has to be modified in    case the java file    name or the input/output directory of the program changes. 
-   
    The ‘javac’ command in run.sh is used for compiling the main program file – ‘AnomalyDetector.java’. Also, the location of      jars is specified while compiling the main program.
-   
    The ‘java’ command in run.sh is used for running the code. Here, I have included the jars to be used, name of the java        file with source code, input files and output file.
-    
