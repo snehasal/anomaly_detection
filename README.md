@@ -36,7 +36,8 @@ This code is used for detecting Anomaly in the Stream Data. Prepared this as a p
    The ‘java’ command in run.sh is used for running the code. Here, I have included the jars to be used, name of the java file    with source code, input files and output file.
    
    ### 4. Alternative Algorithm ###
-   **For adding a new friend to the social network**, instead of rebuilding the whole social network, we can just change the necessary details in the social network.
+   **For adding a new friend to the social network**
+   Instead of rebuilding the whole social network, we can just change the necessary details in the social network.
    
    Let's assume A and B become friends and there is a social network that exists already.
    
@@ -48,8 +49,7 @@ This code is used for detecting Anomaly in the Stream Data. Prepared this as a p
    
    
 **Delete Friend from social netwrok**
-
-Suppose we delete A and B.
+Suppose we want to unfriend A and B.
 
 1. Remove B from A's list.
 2. Add A to a queue. Go through A's list and find get all nodes that are connected to B with previous node as A. Add them to the queue. 
