@@ -45,8 +45,7 @@ This code is used for detecting Anomaly in the Stream Data. Prepared this as a p
    1.	Check depth of B in A's network. Since it will be greater than 1, change it to 1. Also keep track of previous neighbor via which A can reach B, which in this case would be B itself. Previous neighbor helps when we need to delete.  
    2.	In A's social network, check all the nodes and see at what depth they are connected to B with. If depth is greater than 2, change their depths to 2, change their previous neighbor to A and add them to a queue of nodes that need to be updated. Once all in A's network are updated, we pop top element in queue, set the depth to 2, and see in their network where B is. If B is now at a depth of more than 3, we do the same, with previous neighbor being the node itself instead of A and depth being 3.
    3.	Do this recursively until the queue is empty, or we reach our max depth of T.
-   
-   For B we need to do the same steps to integrate A to its list.
+   4. For B we need to do the same steps to integrate A to its list.
 
    **Alternative Algorithm For deleting a friend from the social network**  
    Suppose we want to unfriend A and B.
@@ -57,6 +56,7 @@ This code is used for detecting Anomaly in the Stream Data. Prepared this as a p
    4. Once we have all nodes we need, we start from A and see if we can get to B from any of the nodes in A by adding a depth of 1 to it. We process down the queue and keep doing this for all nodes. 
    5. Repeat step for until no nodes update anymore
 (Replicating Bellman Ford algorithm)
-   6. Once that is done, we have successfully integrated A-B deletion from the network.
-   We need to do the same to remove A from B's network.
+   6. We need to do the same to remove A from B's network.
+   7. Once that is done, we have successfully integrated A-B deletion from the network.
+ 
 
