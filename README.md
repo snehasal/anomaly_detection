@@ -1,7 +1,7 @@
 # anomaly_detection
 This code is used for detecting Anomaly in the Stream Data. Prepared this as a part of CodingChallenge for Data Insight
 
-## 1.	Summarization of the Approach: ##
+### 1.	Summarization of the Approach: ###
     To implement the challenge, I have followed below steps.
     Steps Followed:
     1.	Read the batch_log file into readInput Array List
@@ -19,26 +19,21 @@ This code is used for detecting Anomaly in the Stream Data. Prepared this as a p
         ..V.	Add the purchase event to eventDictionary(step 2a)
 
 
-### 2.	Dependencies:###
+### 2.	Dependencies: ###
 
     I have used two external jars for processing the Json inputs and outputs.
+    
+     1. java-json.jar: To Read Input Files into Json Objects
+        Download Location: http://www.java2s.com/Code/JarDownload/java/java-json.jar.zip
+              
+    2. gson-2.6.2-javadoc.jar: To write the output to Json Objects
+       Download Location: https://repo1.maven.org/maven2/com/google/code/gson/gson/2.6.2/
+       File to Download: gson-2.6.2-javadoc.jar
 
-    1.	java-json.jar: To Read Input Files into Json Objects
-    Download Location: http://www.java2s.com/Code/JarDownload/java/java-json.jar.zip
-
-    2.	gson-2.6.2-javadoc.jar: To write the output to Json Objects
-    Download Location: https://repo1.maven.org/maven2/com/google/code/gson/gson/2.6.2/
-    File to Download: gson-2.6.2-javadoc.jar     
-
-
-**3.	Run instructions:**
+### 3.	Run instructions: ###
 
     The ‘src’ folder contains all the java files(*.java) containing the source code. It also contains a folder ‘jars’ which       has external java libraries used in my program. 
     The run.sh contains the script to compile and run the Java Program. The run.sh has to be modified in    case the java file     name or the input/output directory of the program changes. 
     The ‘javac’ command in run.sh is used for compiling the main program file – ‘AnomalyDetector.java’. Also, the location of     jars is specified while compiling the main program.
     The ‘java’ command in run.sh is used for running the code. Here, I have included the jars to be used, name of the java         file with source code, input files and output file.
     
-     1. A numbered list
-              1. A nested numbered list
-              2. Which is numbered
-          2. Which is numbered
