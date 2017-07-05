@@ -58,4 +58,5 @@ This code is used for detecting Anomaly in the Stream Data. Prepared this as a p
    5. Repeat step for until no nodes update anymore
 (Replicating Bellman Ford algorithm)
    6. Once that is done, we have successfully integrated A-B deletion from the network.
+   We need to do the same to remove A from B's network.
 
