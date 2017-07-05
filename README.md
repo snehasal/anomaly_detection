@@ -12,11 +12,11 @@ This code is used for detecting Anomaly in the Stream Data. Prepared this as a p
    4. For each Test Event:
       - For a befriend/unfriend event – update the social Network of friends.
       - For a purchase Event:
-            I.	  Retrieve the friends of the user up to degree D.
-            II.  Gather all transaction Data for the friendsList and put them in a priority Queue based on latest timestamp                    (first) and order of event(second)
-            III. Calculate mean and standard deviation of the top T events and compare it with test amount.
-            IV.  If the amount is found to be anomalous, write it to the output file
-            V.	  Add the purchase event to eventDictionary(step 2a)
+            1.	 Retrieve the friends of the user up to degree D.
+            2.  Gather all transaction Data for the friendsList and put them in a priority Queue based on latest timestamp                     (first) and order of event(second)
+            3.  Calculate mean and standard deviation of the top T events and compare it with test amount.
+            4.  If the amount is found to be anomalous, write it to the output file
+            5.	 Add the purchase event to eventDictionary(step 2a)
 
 ### 2.	Dependencies: ###
    I have used two external jars for processing the Json inputs and outputs.
