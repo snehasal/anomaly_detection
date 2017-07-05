@@ -30,7 +30,7 @@ This code is used for detecting Anomaly in the Stream Data. Prepared this as a p
 
 ### 3.	Run instructions: ###
 
-   The ‘src’ folder contains all the java files(*.java) containing the source code. It also contains a folder ‘jars’ which        has external java libraries used in my program. 
+   The ‘src’ folder contains all the java files(*.java) containing the source code. It also contains a folder ‘jars’ which        has external java libraries used in my program...
    The run.sh contains the script to compile and run the Java Program. The run.sh has to be modified in case the java file        name or the input/output directory of the program changes.
-   The ‘javac’ command in run.sh is used for compiling the main program file – ‘AnomalyDetector.java’. Also, the location of      jars is specified while compiling the main program. 
+   ...The ‘javac’ command in run.sh is used for compiling the main program file – ‘AnomalyDetector.java’. Also, the location      of jars is specified while compiling the main program. 
    The ‘java’ command in run.sh is used for running the code. Here, I have included the jars to be used, name of the java file    with source code, input files and output file.
