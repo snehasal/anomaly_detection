@@ -3,7 +3,6 @@ This code is used for detecting Anomaly in the Stream Data. Prepared this as a p
 
 ### 1.	Summarization of the Approach: ###
    To implement the challenge, I have followed below steps.
-   Steps Followed:
    1. Read the batch_log file into readInput Array List
    2. Process the input file to build a model
       * Create objects of class PurchaseEvents and update eventDictionary. The eventDictionary is a hashmap with the key               as user and value as an Array list of Objects of class PuchaseEvent. These objects contain the transactions as                 seen in input data.
